@@ -1,5 +1,5 @@
 ## First install webhooks
-(https://thelinuxnotes.com/index.php/how-to-automatically-deploy-from-github-to-server-using-webhook/)[useful link]
+[useful link](https://thelinuxnotes.com/index.php/how-to-automatically-deploy-from-github-to-server-using-webhook/)
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install webhook
@@ -56,4 +56,4 @@ server {
 		proxy_pass http://localhost:9000;
 	}
 }
-## You can add ssl certificate, (https://github.com/diyaaalobaidy/HOW2DOs/blob/main/Deploy%20on%20nginx.md)[can be found here]
+## You can add ssl certificate, [can be found here](https://github.com/diyaaalobaidy/HOW2DOs/blob/main/Deploy%20on%20nginx.md)
