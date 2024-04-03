@@ -64,6 +64,18 @@ milter_protocol = 6
 smtpd_milters = local:opendkim/opendkim.sock
 non_smtpd_milters = $smtpd_milters
 ```
+
+Open the master.cf file
+```bash
+nano /etc/postfix/master.cf
+```
+
+Uncomment the following line and save the file
+
+```bash
+submission inet n       -       y       -       -       smtpd
+```
+
 **Note**: You need certbot for the certificate, see [this tutorial](https://github.com/diyaaalobaidy/QAF-HOW2DOs/blob/main/Deploy%20on%20nginx.md) for more details
 
 **Note**: If you only want to send emails, you don't need Dovecot and Roundcube, skip to opendkim
