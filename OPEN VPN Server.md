@@ -90,6 +90,10 @@ net.ipv4.ip_forward=1
 ```bash
 sudo sysctl -p
 ```
+- Make ```/etc/openvpn/ccd``` directory
+```bash
+mkdir /etc/openvpn/ccd
+```
 - Start and enable OPEN VPN server
 ```bash
 sudo systemctl start openvpn@server 
