@@ -60,7 +60,7 @@ push "redirect-gateway ipv6"
 dh none
 ecdh-curve prime256v1
 tls-crypt ta.key
-crl-verify crl.pem
+#crl-verify crl.pem
 ca ca.crt
 cert server.crt
 key server.key
