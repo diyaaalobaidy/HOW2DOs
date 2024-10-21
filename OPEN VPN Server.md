@@ -132,7 +132,7 @@ persist-key
 persist-tun
 key-direction 1
 remote-cert-tls server
-tls-auth ta.key 1
+tls-crypt ta.key
 cipher AES-256-CBC
 verb 3
 ```
@@ -154,9 +154,9 @@ cat ${BASE_CONFIG} \
     ${KEY_DIR}/${1}.crt \
     <(echo -e '</cert>\n<key>') \
     ${KEY_DIR}/${1}.key \
-    <(echo -e '</key>\n<tls-auth>') \
+    <(echo -e '</key>\n<tls-crypt>') \
     ${KEY_DIR}/ta.key \
-    <(echo -e '</tls-auth>') \
+    <(echo -e '</tls-crypt>') \
     > ${OUTPUT_DIR}/${1}.ovpn
 ```
 - Change the file to be executable
