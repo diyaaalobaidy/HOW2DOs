@@ -60,7 +60,7 @@ push "redirect-gateway ipv6"
 dh none
 ecdh-curve prime256v1
 tls-crypt ta.key
-#crl-verify crl.pem
+crl-verify crl.pem
 ca ca.crt
 cert server.crt
 key server.key
@@ -153,9 +153,9 @@ cat ${BASE_CONFIG} \
     ${KEY_DIR}/${1}.crt \
     <(echo -e '</cert>\n<key>') \
     ${KEY_DIR}/${1}.key \
-    <(echo -e '</key>\n<tls-crypt>') \
+    <(echo -e '</key>\n<tls-auth>') \
     ${KEY_DIR}/ta.key \
-    <(echo -e '</tls-crypt>') \
+    <(echo -e '</tls-auth>') \
     > ${OUTPUT_DIR}/${1}.ovpn
 ```
 - Change the file to be executable
