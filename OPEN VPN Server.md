@@ -135,6 +135,8 @@ remote-cert-tls server
 tls-crypt ta.key
 cipher AES-256-CBC
 verb 3
+route 10.8.0.0 255.255.255.0
+route-nopull
 ```
 - Make a config generator script to be used to generate clients
 ```bash
