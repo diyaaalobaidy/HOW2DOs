@@ -28,11 +28,12 @@ set_var EASYRSA_REQ_OU         "Research Lab"
 ./easyrsa gen-req server nopass
 ./easyrsa sign-req server server
 ./easyrsa gen-dh
+./easyrsa gen-crl --days 3650
 openvpn --genkey --secret pki/ta.key
 ```
 - Copy the certificate files to `/etc/openvpn/` directory
 ```bash
-sudo cp pki/{ca.crt,dh.pem,ta.key} /etc/openvpn
+sudo cp pki/{ca.crt,dh.pem,ta.key,crl.pem} /etc/openvpn
 sudo cp pki/issued/server.crt /etc/openvpn
 sudo cp pki/private/server.key /etc/openvpn
 ```
