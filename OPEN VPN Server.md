@@ -44,7 +44,7 @@ sudo nano /etc/openvpn/server.conf
 - Edit the configurations to match these settings, **if there are other configurations leave them as they are**
 ```bash
 port 1194
-proto udp6
+proto tcp
 dev tun
 user nobody
 group nogroup
@@ -122,7 +122,7 @@ nano client.conf
 ```bash
 client
 dev tun
-proto udp
+proto tcp
 remote SERVER_IP_ADDRESS 1194
 resolv-retry infinite
 nobind
