@@ -127,7 +127,7 @@ remote SERVER_IP_ADDRESS 1194
 resolv-retry infinite
 nobind
 user nobody
-group nobody
+group nogroup
 persist-key
 persist-tun
 key-direction 1
